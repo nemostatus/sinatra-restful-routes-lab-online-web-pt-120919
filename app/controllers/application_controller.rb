@@ -17,11 +17,25 @@ post '/recipes' do
   redirect  "/articles/#{@recipe.id}"
 end
 
+get '/recipes/:id/edit' do  #load edit form
+    @recipe = Recipe.find_by_id(params[:id])
+    erb :edit
+  end
+ 
+patch '/recipes/:id' do #edit action
+ @recipe = Article.find_by_id(params[:id])
+ @recipe.title = params[:title]
+ @recipe.content = params[:content]
+ @recipe.save
+  redirect to "/articles/#{@article.id}"
+end
+
 delete '/recipes/:id' do #delete action
   @recipe = Recipe.find_by_id(params[:id])
   @Recipe.delete
   redirect to '/recipes'
 end
+
 
 
 get '/recipes/:id' do
