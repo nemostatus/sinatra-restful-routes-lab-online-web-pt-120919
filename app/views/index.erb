@@ -1,0 +1,12 @@
+<%@recipes.each do |a|%>
+<%=a.name%>
+<%=a.ingredients%>
+<%=a.cook_time%>
+<%end%>
+<%@recipes.each do |a|%>
+<form method="POST" action="/recipes/<%=a.id%>">
+<a href="/recipes/<%=a.id%>"><%a.name%></a>
+<%end%>
+
+
+
