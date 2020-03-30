@@ -23,7 +23,7 @@ get '/recipes/:id/edit' do  #load edit form
   end
  
 patch '/recipes/:id' do #edit action
- @recipe = Article.find_by_id(params[:id])
+ @recipe = Recipe.find_by_id(params[:id])
  @recipe.title = params[:title]
  @recipe.content = params[:content]
  @recipe.save
