@@ -18,8 +18,8 @@ post '/recipes' do
 end
 
 delete '/recipes/:id' do #delete action
-  @article = Article.find_by_id(params[:id])
-  @article.delete
+  @recipe = Recipe.find_by_id(params[:id])
+  @Recipe.delete
   redirect to '/recipes'
 end
 
