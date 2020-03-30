@@ -32,7 +32,7 @@ end
 
 delete '/recipes/:id' do #delete action
   @recipe = Recipe.find_by_id(params[:id])
-  @Recipe.delete
+  @recipe.delete
   redirect to '/recipes'
 end
 
