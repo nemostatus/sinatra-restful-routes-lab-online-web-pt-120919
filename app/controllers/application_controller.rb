@@ -27,7 +27,7 @@ patch '/recipes/:id' do #edit action
  @recipe.title = params[:title]
  @recipe.content = params[:content]
  @recipe.save
-  redirect to "/articles/#{@article.id}"
+  redirect to "/recipes/#{@recipe.id}"
 end
 
 delete '/recipes/:id' do #delete action
