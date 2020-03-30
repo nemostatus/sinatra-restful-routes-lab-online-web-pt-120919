@@ -5,7 +5,7 @@
 <%end%>
 <%@recipes.each do |a|%>
 <form method="POST" action="/recipes/<%=a.id%>">
-<a href="/articles/<%=a.id%>"><%a.name%></a>
+<a href="/recipes/<%=a.id%>"><%a.name%></a>
 <%end%>
 
 
